@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff0f6">
+<title>FOR MY PRECIOUS QUEEN HAMSA</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Pacifico&family=Playfair+Display:wght@500;600;700&display=swap');
+:root{--pink:#f6a9c7;--deep:#b94e7c;--cream:#fff9f4;--lav:#e8dcff;--ink:#70445b;--rose:#ffe1ec;--gold:#f5d58c}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font-family:'DM Sans',sans-serif;background:linear-gradient(145deg,#fff5f8,#fff9f0 45%,#f6efff);overflow-x:hidden}
+button{font:inherit;cursor:pointer}
+button:focus-visible,a:focus-visible{outline:3px solid #b94e7c;outline-offset:4px}
+#sparkles{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.spark{position:absolute;opacity:.65;animation:twinkle 3s ease-in-out infinite alternate}
+@keyframes twinkle{from{transform:scale(.7) rotate(0);opacity:.25}to{transform:scale(1.2) rotate(22deg);opacity:.9}}
+.page{position:relative;z-index:1}
+.hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:35px 18px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 20% 20%,#ffe0ec 0,transparent 36%),radial-gradient(ellipse at 80% 70%,#e8ddff 0,transparent 35%)}
+.hero:before,.hero:after{content:"";position:absolute;width:230px;height:230px;border:1px solid #efb6ce;border-radius:50%;opacity:.45}
+.hero:before{left:-100px;top:10%}.hero:after{right:-110px;bottom:8%;width:300px;height:300px}
+.hero-inner{max-width:780px;position:relative;z-index:2}
+.eyebrow{letter-spacing:.18em;text-transform:uppercase;font-size:.72rem;color:#b46b8b;font-weight:700}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,8vw,5.8rem);line-height:1.03;margin:18px 0;color:#a94e78}
+.script{font-family:'Pacifico',cursive;color:#d47ca2}
+.hero p{max-width:560px;margin:18px auto 26px;line-height:1.8;color:#8d6478}
+.primary,.soft-btn{border:0;border-radius:999px;padding:14px 24px;background:linear-gradient(110deg,#e88eb2,#c987c9);color:white;font-weight:700;box-shadow:0 10px 25px #d88aaf55;transition:transform .2s,box-shadow .2s}
+.primary:hover,.soft-btn:hover{transform:translateY(-3px);box-shadow:0 14px 28px #d88aaf66}
+.hero-heart{font-size:clamp(3rem,8vw,5rem);display:block;filter:drop-shadow(0 8px 12px #e89fbd55);animation:float 3.4s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-13px) rotate(4deg)}}
+.scroll-hint{position:absolute;bottom:22px;font-size:.8rem;color:#b17a92}
+nav{position:sticky;top:0;z-index:20;display:flex;justify-content:center;gap:8px;flex-wrap:wrap;padding:12px;background:#fff9f2dd;backdrop-filter:blur(12px);border-bottom:1px solid #f3dce7}
+nav a{text-decoration:none;color:#93647b;font-size:.82rem;font-weight:700;padding:9px 13px;border-radius:30px}
+nav a:hover{background:#ffe5ef;color:#a94e78}
+main section{max-width:1100px;margin:auto;padding:78px 20px}
+.section-head{text-align:center;margin-bottom:34px}
+.kicker{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:#c17c9a;font-weight:700}
+h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.4rem);color:#a94e78;margin:9px 0}
+.section-head p{line-height:1.7;color:#98788a;max-width:600px;margin:0 auto}
+.paper{background:#fffdfb;border:1px solid #f5dce7;border-radius:26px;box-shadow:0 15px 45px #9f63851a}
+.garden{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.flower{min-height:180px;border:1px solid #f4dce7;border-radius:24px;background:linear-gradient(145deg,#fff,#fff0f6);display:grid;place-items:center;text-align:center;padding:18px;color:#9c5b7a;transition:transform .22s,box-shadow .22s}
+.flower:hover{transform:translateY(-6px) rotate(-1deg);box-shadow:0 14px 25px #d88aaf33}
+.flower .emoji{font-size:3.1rem;display:block;margin-bottom:10px;filter:drop-shadow(0 4px 4px #d89bb533)}
+.flower strong{font-size:.92rem}
+.flower small{display:block;margin-top:5px;color:#b18b9c}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.memory{padding:15px;cursor:pointer;text-align:left;border:1px solid #f1d9e5;background:#fffdfb;border-radius:22px;transition:transform .2s}
+.memory:hover{transform:translateY(-5px)}
+.photo-placeholder{height:165px;border-radius:15px;background:linear-gradient(135deg,#ffe2ec,#e9e0ff);display:grid;place-items:center;font-size:2.7rem;position:relative;overflow:hidden}
+.photo-placeholder:after{content:"";position:absolute;width:180px;height:180px;border:1px solid #fff9;border-radius:50%}
+.memory h3{margin:14px 4px 5px;color:#a6537b;font-family:'Playfair Display',serif}
+.memory p{margin:0 4px 5px;color:#a18493;font-size:.88rem;line-height:1.5}
+.gifts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.gift{border:1px solid #f1d9e5;border-radius:23px;background:#fffdfb;padding:24px 15px;text-align:center;min-height:190px;color:#9d5b7a;transition:transform .2s}
+.gift:hover{transform:translateY(-5px)}
+.gift .boxemoji{font-size:3.4rem;display:block;margin-bottom:12px;animation:float 3s ease-in-out infinite}
+.game-panel{padding:28px;text-align:center;max-width:720px;margin:auto}
+.game-heart{font-size:4rem;display:block;margin:8px}
+.progress{height:9px;border-radius:10px;background:#f6e5ed;overflow:hidden;margin:18px 0}
+.progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#f0a1c0,#c9a1e8);transition:width .3s}
+.game-options{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.game-options button{border:1px solid #efcddd;background:#fff4f8;border-radius:18px;padding:12px 17px;color:#9a5a78;font-weight:700}
+.game-options button:hover{background:#ffe3ef}
+.letter-wrap{max-width:760px;margin:auto;padding:34px;text-align:center;position:relative}
+.envelope{border:0;background:transparent;font-size:6rem;filter:drop-shadow(0 10px 12px #d68eaa55);transition:transform .3s}
+.envelope:hover{transform:translateY(-8px) rotate(-4deg)}
+.letter{display:none;text-align:left;margin-top:20px;padding:28px;background:repeating-linear-gradient(#fffdf8 0,#fffdf8 31px,#f6e6eb 32px);border-radius:14px;line-height:2;color:#80576b;box-shadow:0 10px 30px #a66b8018}
+.letter.open{display:block;animation:unfold .5s ease}
+@keyframes unfold{from{opacity:0;transform:translateY(12px) scale(.98)}to{opacity:1;transform:none}}
+footer{text-align:center;padding:45px 20px 65px;color:#b17b93}
+footer .script{font-size:1.8rem}
+.modal{position:fixed;inset:0;background:#59344766;display:none;place-items:center;padding:18px;z-index:50;backdrop-filter:blur(5px)}
+.modal.show{display:grid}
+.modal-card{max-width:480px;width:100%;padding:30px;text-align:center;position:relative;animation:unfold .25s ease}
+.modal-card h3{font-family:'Playfair Display',serif;color:#a94e78;font-size:1.8rem;margin:8px 0}
+.modal-card p{line-height:1.8;color:#8d6d7d}
+.close{position:absolute;right:14px;top:12px;border:0;background:#fff0f5;border-radius:50%;width:34px;height:34px;color:#9b5878;font-size:1.1rem}
+.confetti{position:fixed;top:-20px;z-index:80;pointer-events:none;animation:fall 2.5s linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(650deg);opacity:0}}
+@media(max-width:760px){.garden{grid-template-columns:repeat(2,1fr)}.cards,.gifts{grid-template-columns:1fr 1fr}main section{padding:60px 16px}.photo-placeholder{height:135px}}
+@media(max-width:470px){nav{gap:2px;padding:8px 4px}nav a{font-size:.72rem;padding:8px}.garden{gap:10px}.flower{min-height:155px;padding:12px}.cards,.gifts{grid-template-columns:1fr}.letter-wrap{padding:22px 16px}.game-panel{padding:22px 15px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<div id="sparkles" aria-hidden="true"></div>
+<div class="page">
+<header class="hero" id="home">
+ <div class="hero-inner">
+  <span class="hero-heart">♡</span>
+  <div class="eyebrow">a tiny corner of the universe</div>
+  <h1>FOR MY PRECIOUS<br><span class="script">QUEEN HAMSA</span></h1>
+  <p>I made this little world for you because there are things about you i never want to leave unsaid. take your time and open everything ♡</p>
+  <button class="primary" onclick="enterWorld()">Open your little world ✨</button>
+ </div>
+ <div class="scroll-hint">made for you with all my love · scroll to explore ↓</div>
+</header>
+<nav aria-label="Main navigation">
+ <a href="#garden">little reasons</a><a href="#memories">things i remember</a><a href="#game">our mini game</a><a href="#gifts">surprises</a><a href="#letter">your letter</a>
+</nav>
+<main>
+<section id="garden">
+ <div class="section-head"><div class="kicker">pick a flower</div><h2>A garden just for you</h2><p>every flower has something i wanted to tell you. tap one and read it</p></div>
+ <div class="garden" id="gardenGrid"></div>
+</section>
+<section id="memories">
+ <div class="section-head"><div class="kicker">little things, big feelings</div><h2>Things i remember</h2><p>we might not have a hundred memories together yet but there are already little things about you that mean so much to me</p></div>
+ <div class="cards" id="memoryGrid"></div>
+</section>
+<section id="game">
+ <div class="section-head"><div class="kicker">a tiny challenge</div><h2>A little test about us</h2><p>just a few questions about the little things that made me fall for you</p></div>
+ <div class="paper game-panel">
+  <span class="game-heart" id="gameHeart">♡</span>
+  <div id="question">Ready to collect some hearts?</div>
+  <div class="progress"><span id="progressBar"></span></div>
+  <div class="game-options" id="gameOptions"><button onclick="startGame()">Let's play ♡</button></div>
+  <p id="gameFeedback" aria-live="polite"></p>
+ </div>
+</section>
+<section id="gifts">
+ <div class="section-head"><div class="kicker">do not peek all at once</div><h2>A few things for you</h2><p>open each little gift because i have a few more things i want you to know</p></div>
+ <div class="gifts" id="giftGrid"></div>
+</section>
+<section id="letter">
+ <div class="section-head"><div class="kicker">one last thing</div><h2>A letter with your name on it</h2><p>There's something waiting inside. Tap the envelope when you're ready.</p></div>
+ <div class="paper letter-wrap">
+  <button class="envelope" id="envelope" onclick="toggleLetter()" aria-label="Open the letter">💌</button>
+  <div class="letter" id="letterText">
+   <p>To my precious Hamsa,</p>
+   <p>I know we might not have loads of moments together to look back on yet but that doesn't mean there aren't little things that I hold so close to my heart. I still remember the first time I heard your voice and how something as simple as hearing you speak became one of my favourite feelings. There is something about your voice that I genuinely cannot explain. It brings me so much comfort and makes everything feel a little better. And then there's the way you look. Hamsa I genuinely don't think you understand just how beautiful you are to me. Every time my eyes fall on you I find myself noticing something new to admire. Your eyes your nose your lips your cheeks and every little detail that makes you look like you. I could look at you for the longest time and still find myself wondering how someone can be this beautiful. But what makes it even more special is that my eyes don't just see how beautiful you are. They see someone who means so much to me and someone I feel incredibly lucky to have in my life.</p>
+   <p>I also still think about our little I love you more argument. It was such a silly little thing but I swear it's one of those moments that makes me smile whenever I remember it. Neither of us wanted to let the other one win and honestly I wouldn't mind having that same argument with you a thousand more times. It's the little things like that which make me realise how much happiness you bring into my life.</p>
+   <p>I know we still have so many memories ahead of us and there is so much more I want to experience with you. I want more conversations more silly arguments more moments where I get to hear your voice and more chances to remind you just how beautiful you are. I hope that whenever you read this you remember that there is someone who looks at you with so much admiration and sees beauty in even the smallest things about you. You really are so precious to me Hamsa and I hope I get to make countless more little memories with you.</p>
+   <p class="script" style="font-size:1.5rem">with love, always ♡</p>
+  </div>
+ </div>
+</section>
+</main>
+<footer><div class="script">made just for Hamsa ♡</div><p>i am really glad i got to know you</p><button class="soft-btn" onclick="sprinkle()">send a little shower of love ✨</button></footer>
+</div>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" onclick="if(event.target===this)closeModal()">
+ <div class="paper modal-card"><button class="close" onclick="closeModal()" aria-label="Close">×</button><div style="font-size:2.5rem" id="modalEmoji">🌷</div><h3 id="modalTitle">A little note</h3><p id="modalBody"></p><button class="primary" onclick="closeModal()">Awww ♡</button></div>
+</div>
+<script>
+const flowers=[
+ ['🌷','Your voice','i still remember the first time i heard your voice. there was just something about it that made me want to keep listening. i did not even need a reason to hear you talk because your voice itself was enough.'],
+ ['🌸','That first feeling','i do not know how to explain it properly but hearing you for the first time made me feel something i still remember. it was one of those little things that stayed with me.'],
+ ['🌼','Your way of speaking','even the simplest things sound different when they come from you. i love the way you talk and how your voice can make me feel calm without you even trying.'],
+ ['🌺','Your smile','i hope you know how lovely your smile is. it is one of those things i wish you could see the way i see it because maybe then you would understand why i like it so much.'],
+ ['🪻','Your mesmerizing beauty','it is not just one thing about your beauty. it is every little detail about your face that comes together to make you so beautiful and everything that makes you stand out from everyone else..'],
+ ['🌹','Your heart','i hope life is always gentle with you. you deserve to feel appreciated and cared for and to never have to question how special you are.'],
+ ['🌻','Your laugh','i hope i get to hear it as often as possible. there is something so lovely about knowing you are happy and getting to hear that happiness in your voice.'],
+ ['🪷','Simply you','i do not need us to have a million memories for you to mean a lot to me. i am happy i got to know you and i want to keep discovering all the little things about you.']
+];
+const memories=[
+ ['🎧','The first time i heard you','i remember the first time i heard your voice and how i fell for it. i could listen to you talk about absolutely anything and still want to hear more.'],
+ ['💗','I love u more','one of my favourite little memories is our cute i love u more argument. neither of us wanted to give in and honestly i would never get tired of arguing with you about who loves who more.'],
+ ['☁️','First time I layed eyes on you','from the very first moment i laid my eyes on you i couldnt help but admire just how beautiful you are. there was something about your face that instantly caught my attention and i still find myself admiring every little detail about you..'],
+ ['🎀','The little things','we might not have loads of shared moments yet but i notice the little things about you and they mean more to me than you probably realise.'],
+ ['🌙','More memories to come','there are still so many little things i want to experience with you. i hope this is only the beginning of a lot of memories we will get to look back on.'],
+ ['🧸','Why i made this','i wanted you to have something that is yours and that reminds you that someone thinks about you in the smallest moments too.']
+];
+const gifts=[
+ ['🎁','A little reminder','i hope you never forget how much i adore your voice and how one of the first things i fell for was simply hearing you speak.'],
+ ['🧁','A tiny challenge','next time we have an i love u more argument i am still not giving up. you can try to win but just know i will be prepared.'],
+ ['💝','A wish for us','i hope we get to make so many more memories together. not even huge or perfect ones just little moments that become special because they are with you.']
+];
+function makeCard(item,kind,index){return `<button class="${kind}" onclick="openNote('${kind}',${index})">${kind==='flower'?`<span class="emoji">${item[0]}</span>`:`<div class="photo-placeholder">${item[0]}</div>`}<strong>${item[1]}</strong>${kind==='flower'?'<small>tap to bloom ✿</small>':`<p>${kind==='memory'?'tap to open this page':'tap to unwrap'}</p>`}</button>`}
+document.getElementById('gardenGrid').innerHTML=flowers.map((x,i)=>makeCard(x,'flower',i)).join('');
+document.getElementById('memoryGrid').innerHTML=memories.map((x,i)=>makeCard(x,'memory',i)).join('');
+document.getElementById('giftGrid').innerHTML=gifts.map((x,i)=>`<button class="gift" onclick="openNote('gift',${i})"><span class="boxemoji">${x[0]}</span><strong>${x[1]}</strong><p>unwrap your surprise ♡</p></button>`).join('');
+function openNote(kind,i){const item=kind==='flower'?flowers[i]:kind==='memory'?memories[i]:gifts[i];document.getElementById('modalEmoji').textContent=item[0];document.getElementById('modalTitle').textContent=item[1];document.getElementById('modalBody').textContent=item[2];document.getElementById('modal').classList.add('show');}
+function closeModal(){document.getElementById('modal').classList.remove('show')}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+function enterWorld(){document.getElementById('garden').scrollIntoView({behavior:'smooth'});sprinkle()}
+function toggleLetter(){const letter=document.getElementById('letterText');letter.classList.toggle('open');document.getElementById('envelope').textContent=letter.classList.contains('open')?'💗':'💌'}
+const questions=[
+ {q:'What was one of the first things i fell for?',a:['Your voice','Your cooking','Your football skills'],correct:0,why:'your voice. i still remember hearing it for the first time ♡'},
+ {q:'What is our iconic little argument?',a:['Who is funnier','Who loves who more','Who gets the last snack'],correct:1,why:'the i love u more argument. and i am still convinced i win.'},
+ {q:'What do i hope we make more of?',a:['More silly arguments','More little memories together','More homework'],correct:1,why:'more little memories with you. that is what i want.'}
+];
+let qIndex=0,score=0;
+function startGame(){qIndex=0;score=0;showQuestion()}
+function showQuestion(){const q=questions[qIndex];document.getElementById('question').textContent=q.q;document.getElementById('gameHeart').textContent='♡';document.getElementById('progressBar').style.width=(qIndex/questions.length*100)+'%';document.getElementById('gameFeedback').textContent='';document.getElementById('gameOptions').innerHTML=q.a.map((a,i)=>`<button onclick="answer(${i})">${a}</button>`).join('')}
+function answer(i){const q=questions[qIndex];const correct=i===q.correct;if(correct)score++;document.getElementById('gameHeart').textContent=correct?'💗':'🌸';document.getElementById('gameFeedback').textContent=q.why;document.getElementById('gameOptions').innerHTML=`<button onclick="nextQuestion()">${qIndex===questions.length-1?'See my result':'Next question →'}</button>`}
+function nextQuestion(){qIndex++;if(qIndex<questions.length){showQuestion();return}document.getElementById('progressBar').style.width='100%';document.getElementById('question').textContent=`You collected ${score} out of ${questions.length} hearts!`;document.getElementById('gameHeart').textContent='💖';document.getElementById('gameFeedback').textContent='your prize: one more reminder that i love u more ♡';document.getElementById('gameOptions').innerHTML='<button onclick="startGame()">Play again ♡</button>'}
+function sprinkle(){const symbols=['♡','✦','✿','💗','✨'];for(let i=0;i<24;i++){const el=document.createElement('span');el.className='confetti';el.textContent=symbols[Math.floor(Math.random()*symbols.length)];el.style.left=Math.random()*100+'vw';el.style.fontSize=(14+Math.random()*18)+'px';el.style.animationDuration=(1.8+Math.random()*1.7)+'s';document.body.appendChild(el);setTimeout(()=>el.remove(),4000)}}
+const sparkles=document.getElementById('sparkles');for(let i=0;i<35;i++){const s=document.createElement('span');s.className='spark';s.textContent=i%3===0?'✦':i%3===1?'♡':'·';s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.fontSize=(10+Math.random()*18)+'px';s.style.animationDelay=Math.random()*3+'s';s.style.color=i%2?'#e6a4c0':'#c4a7e8';sparkles.appendChild(s)}
+</script>
+</body>
+</html>
